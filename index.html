@@ -12,14 +12,114 @@
     />
   </head>
   <body>
+    <!-- HEADER -->
+    <header class="header-container">
+      <span class="header-title">DND Character List</span>
+    </header>
+    <!-- END HEADER -->
+    <main id="list-container">
+      <div class="char-container"></div>
+      <div class="char-container"></div>
+      <div class="char-container"></div>
+    </main>
+    <!-- ADD CHARACTER FORM -->
     <div id="form-container">
       <div class="container-title">Add Character</div>
-      <form action="#" id="new-char-form"></form>
+      <form action="#" id="new-char-form">
+        <!-- name and campaign name -->
+        <div class="char-name">
+          <div class="input-box">
+            <label for="charName" class="details">Name: </label>
+            <input
+              type="text"
+              name="charName"
+              id=""
+              placeholder="Your character's name"
+            />
+          </div>
+          <div class="input-box">
+            <label for="campName" class="details">Campaign Name: </label>
+            <input
+              type="text"
+              name="campName"
+              id=""
+              placeholder="Your character's primary campaign"
+            />
+          </div>
+        </div>
+        <!-- info about character -->
+        <div class="char-details">
+          <div class="input-box">
+            <label for="charGender" class="details">Gender: </label>
+            <input
+              type="text"
+              name="charGender"
+              id=""
+              placeholder="Your character's gender"
+            />
+          </div>
+          <div class="input-box">
+            <label for="charRace" class="details">Race: </label>
+            <input
+              type="text"
+              name="charRace"
+              id=""
+              placeholder="Your character's race"
+            />
+          </div>
+          <div class="input-box">
+            <label for="charClass" class="details">Class: </label>
+            <input
+              type="text"
+              name="charClass"
+              id=""
+              placeholder="Your character's class"
+            />
+          </div>
+          <div class="input-box">
+            <label for="charLevel" class="details">Level: </label>
+            <input
+              type="text"
+              name="charLevel"
+              id=""
+              inputmode="numeric"
+              placeholder="Your character's level"
+            />
+          </div>
+          <div class="input-box">
+            <label for="charActive" class="details">Alive/Active?: </label>
+            <select id="" name="charActive">
+              <option value="Yes" selected>Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+        </div>
+        <!-- description box -->
+        <div class="char-desc">
+          <div class="input-box">
+            <label for="" class="details">Description: </label>
+            <textarea
+              type="textarea"
+              name=""
+              id=""
+              rows="8"
+              cols="60"
+              placeholder="Describe your character."
+            ></textarea>
+          </div>
+        </div>
+        <!-- save btn -->
+        <div class="save-btn">
+          <button onclick="">Save</button>
+        </div>
+      </form>
     </div>
-
+    <!-- end character form -->
+    <!-- bottom right add char btn -->
     <button class="add-btn" onclick="showForm()">
       <span class="material-symbols-outlined"> add </span>
     </button>
+    <!-- end add char btn -->
   </body>
   <div id="bg-blur" onclick="showForm()"></div>
   <script src="app.js"></script>

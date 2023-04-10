@@ -1,79 +1,138 @@
-@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@100;300;500;900&display=swap");
-
-html {
-  font-size: 62.5%;
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Oswald:wght@200;300;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-/* add char button */
-.add-btn {
-  border: 1px black solid;
-  background-color: #962020;
-  border-radius: 100%;
-  height: 4rem;
-  width: 4rem;
+html {
+  font-size: 62.5%;
+}
 
-  position: absolute;
-  bottom: 2rem;
-  right: 2rem;
-  z-index: 1;
+body {
+  background-color: #c0b6ab;
 }
-.add-btn:active {
-  background-color: rgb(156, 57, 57);
+
+/* header */
+
+.header-container {
+  height: 10.5rem;
+  width: 100%;
+  background-color: #0a0808;
+  display: flex;
+  align-items: center;
+  border-bottom: 0.5rem solid #962020;
 }
-.material-symbols-outlined {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-variation-settings: "FILL" 0, "wght" 600, "GRAD" 0, "opsz" 48;
+
+.header-title {
+  font-size: 5rem;
+  font-weight: 300;
+  font-family: "Oswald", sans-serif;
+  color: #f9f6f5;
+  margin: 2.5rem;
+}
+
+/* list area */
+#list-container {
+  display: flex;
+}
+
+.char-container {
+  margin: 3rem;
+  height: 35rem;
+  width: 45rem;
+  background-color: rebeccapurple;
 }
 
 /* form container */
 #form-container {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
   position: absolute;
   top: 50%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  height: 70rem;
-  width: 65rem;
-  background-color: #f9f6f5;
+  max-height: 70rem;
+  max-width: 50rem;
+  background-color: #c0b6ab;
+  border-left: 1px black solid;
+  border-right: 1px black solid;
+  border-bottom: 1px black solid;
   z-index: 1;
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#new-char-form > p {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .container-title {
-  font-family: "Urbanist", sans-serif;
+  font-family: "Lato", sans-serif;
   color: #f9f6f5;
   text-align: center;
   font-size: 5rem;
   padding: 1.5rem;
+  margin-bottom: 1rem;
   background-color: #0a0808;
   border-bottom: 0.75rem solid #962020;
 }
 
-.char-name {
+#new-char-form > div {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.char-name > * {
+#new-char-form .char-name .input-box {
+  width: calc(75% - 2rem);
+}
+
+#new-char-form .char-details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#new-char-form .char-details .input-box {
+  width: calc(100% / 2 - 2rem);
+}
+
+.char-name .input-box input,
+.char-details .input-box input {
+  width: 100%;
+}
+
+.char-name .input-box label,
+.char-details .input-box label {
+  vertical-align: bottom;
+}
+
+.char-desc .input-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box {
   margin: 1rem 0.5rem;
 }
-#name {
-  width: 25rem;
+
+.details {
+  font-size: 2.25rem;
+  margin-right: 0.25rem;
+}
+
+.save-btn button {
+  border-radius: 0.5rem;
+  color: #f9f6f5;
+  background-color: #0a0808;
+  border: transparent;
+  height: 3.5rem;
+  width: 8rem;
+  margin: 1rem;
+}
+
+.save-btn button:hover {
+  background-color: #252020;
+}
+
+.save-btn button:active {
+  border: 3px #962020 solid;
 }
 
 /* bg blur */
@@ -84,6 +143,36 @@ html {
   z-index: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(15px);
+  background-color: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(3px);
+}
+
+/* add char button */
+.add-btn {
+  background-color: #0a0808;
+  border-radius: 100%;
+  height: 4rem;
+  width: 4rem;
+  color: #f9f6f5;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1;
+}
+
+.add-btn:hover {
+  background-color: #252020;
+}
+
+.add-btn:active {
+  border: 3px #962020 solid;
+}
+
+.material-symbols-outlined {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-variation-settings: "FILL" 0, "wght" 600, "GRAD" 0, "opsz" 48;
 }

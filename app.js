@@ -1,7 +1,7 @@
 let bgBlur = document.getElementById("bg-blur");
 let formContainer = document.getElementById("form-container");
-// bgBlur.style.display = "none";
-// formContainer.style.display = "none";
+bgBlur.style.display = "none";
+formContainer.style.display = "none";
 
 let myLibrary = [];
 
