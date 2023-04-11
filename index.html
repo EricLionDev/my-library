@@ -10,6 +10,10 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
   </head>
   <body>
     <!-- HEADER -->
@@ -17,11 +21,46 @@
       <span class="header-title">DND Character List</span>
     </header>
     <!-- END HEADER -->
+    <!-- CHARACTER LIST -->
     <main id="list-container">
-      <div class="char-container"></div>
-      <div class="char-container"></div>
-      <div class="char-container"></div>
+      <div class="char-container">
+        <div id="info-container">
+          <p id="list-char-name">Apple Scraps</p>
+          <p id="list-char-camp">Vestiges of Valiar</p>
+          <p id="list-char-gender">Male He/Him</p>
+          <p id="list-char-lvl">Level 18</p>
+          <p id="list-char-race">Tabaxi</p>
+          <p id="list-char-class">
+            15 Mastermind Rogue / 5 Gloom Stalker Ranger
+          </p>
+          <p id="list-char-description">
+            Your accent, mannerisms, figures of speech, and perhaps even your
+            appearance all mark you as foreign. Curious glances are directed
+            your way wherever you go, which can be a nuisance, but you also gain
+            the friendly interest of scholars and others intrigued by far-off
+            lands, to say nothing of everyday folk who are eager to hear stories
+            of your homeland. You can parley this attention into access to
+            people and places you might not otherwise have, for you and your
+            traveling companions. Noble lords, scholars, and merchant princes,
+            to name a few, might be interested in hearing about your distant
+            homeland and people.
+          </p>
+          <div id="bottom-btns">
+            <button
+              id="list-char-active"
+              class="is-active"
+              onclick="swapActive()"
+            >
+              Active
+            </button>
+            <button id="delete-btn">
+              <span class="material-symbols-outlined">delete</span>
+            </button>
+          </div>
+        </div>
+      </div>
     </main>
+    <!-- END CHARACTER LIST -->
     <!-- ADD CHARACTER FORM -->
     <div id="form-container">
       <div class="container-title">Add Character</div>
@@ -35,6 +74,7 @@
               name="charName"
               id=""
               placeholder="Your character's name"
+              required
             />
           </div>
           <div class="input-box">
@@ -44,6 +84,7 @@
               name="campName"
               id=""
               placeholder="Your character's primary campaign"
+              required
             />
           </div>
         </div>
@@ -56,6 +97,7 @@
               name="charGender"
               id=""
               placeholder="Your character's gender"
+              required
             />
           </div>
           <div class="input-box">
@@ -65,6 +107,7 @@
               name="charRace"
               id=""
               placeholder="Your character's race"
+              required
             />
           </div>
           <div class="input-box">
@@ -74,6 +117,7 @@
               name="charClass"
               id=""
               placeholder="Your character's class"
+              required
             />
           </div>
           <div class="input-box">
@@ -84,6 +128,7 @@
               id=""
               inputmode="numeric"
               placeholder="Your character's level"
+              required
             />
           </div>
           <div class="input-box">
@@ -104,13 +149,15 @@
               id=""
               rows="8"
               cols="60"
+              maxlength="250"
               placeholder="Describe your character."
+              required
             ></textarea>
           </div>
         </div>
         <!-- save btn -->
         <div class="save-btn">
-          <button onclick="">Save</button>
+          <button onclick="newChar()">Save</button>
         </div>
       </form>
     </div>
