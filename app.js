@@ -97,7 +97,17 @@ function renderList() {
   // active button
   let activeBtn = document.createElement("button");
   activeBtn.setAttribute("id", "list-char-active");
-  activeBtn.setAttribute("onclick", "swapActive()");
+  activeBtn.addEventListener("click", function () {
+    if (activeBtn.classList.contains("is-active")) {
+      activeBtn.classList.add("not-active");
+      activeBtn.classList.remove("is-active");
+      activeBtn.innerText = "Not Active";
+    } else {
+      activeBtn.classList.add("is-active");
+      activeBtn.classList.remove("not-active");
+      activeBtn.innerText = "Active";
+    }
+  });
   bottomBtns.appendChild(activeBtn);
 
   if (myCharacters[myCharacters.length - 1].active == "Yes") {
@@ -124,8 +134,7 @@ function renderList() {
 // ACTIVE BUTTON
 let activeButton = document.getElementById("list-char-active");
 
-function swapActive() {
-  console.log("click");
+activeButton.addEventListener("click", function () {
   if (activeButton.classList.contains("is-active")) {
     activeButton.classList.add("not-active");
     activeButton.classList.remove("is-active");
@@ -135,7 +144,7 @@ function swapActive() {
     activeButton.classList.remove("not-active");
     activeButton.innerText = "Active";
   }
-}
+});
 
 // show / hide form
 function showForm() {
