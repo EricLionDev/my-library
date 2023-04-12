@@ -23,40 +23,36 @@
     <!-- END HEADER -->
     <!-- CHARACTER LIST -->
     <main id="list-container">
-      <div class="char-container">
-        <div id="info-container">
-          <p id="list-char-name">Apple Scraps</p>
-          <p id="list-char-camp">Vestiges of Valiar</p>
-          <p id="list-char-gender">Male He/Him</p>
-          <p id="list-char-lvl">Level 18</p>
-          <p id="list-char-race">Tabaxi</p>
-          <p id="list-char-class">
-            15 Mastermind Rogue / 5 Gloom Stalker Ranger
-          </p>
-          <p id="list-char-description">
-            Your accent, mannerisms, figures of speech, and perhaps even your
-            appearance all mark you as foreign. Curious glances are directed
-            your way wherever you go, which can be a nuisance, but you also gain
-            the friendly interest of scholars and others intrigued by far-off
-            lands, to say nothing of everyday folk who are eager to hear stories
-            of your homeland. You can parley this attention into access to
-            people and places you might not otherwise have, for you and your
-            traveling companions. Noble lords, scholars, and merchant princes,
-            to name a few, might be interested in hearing about your distant
-            homeland and people.
-          </p>
-          <div id="bottom-btns">
-            <button
-              id="list-char-active"
-              class="is-active"
-              onclick="swapActive()"
-            >
-              Active
-            </button>
-            <button id="delete-btn">
-              <span class="material-symbols-outlined">delete</span>
-            </button>
-          </div>
+      <div id="info-container">
+        <p id="list-char-name">Apple Scraps</p>
+        <p id="list-char-camp">Vestiges of Valiar</p>
+        <p id="list-char-gender">Male He/Him</p>
+        <p id="list-char-lvl">Level 18</p>
+        <p id="list-char-race">Tabaxi</p>
+        <p id="list-char-class">15 Mastermind Rogue / 5 Gloom Stalker Ranger</p>
+        <p id="list-char-description">
+          Your accent, mannerisms, figures of speech, and perhaps even your
+          appearance all mark you as foreign. Curious glances are directed your
+          way wherever you go, which can be a nuisance, but you also gain the
+          friendly interest of scholars and others intrigued by far-off lands,
+          to say nothing of everyday folk who are eager to hear stories of your
+          homeland. You can parley this attention into access to people and
+          places you might not otherwise have, for you and your traveling
+          companions. Noble lords, scholars, and merchant princes, to name a
+          few, might be interested in hearing about your distant homeland and
+          people.
+        </p>
+        <div id="bottom-btns">
+          <button
+            id="list-char-active"
+            class="is-active"
+            onclick="swapActive()"
+          >
+            Active
+          </button>
+          <button id="delete-btn">
+            <span class="material-symbols-outlined">delete</span>
+          </button>
         </div>
       </div>
     </main>
@@ -72,7 +68,7 @@
             <input
               type="text"
               name="charName"
-              id=""
+              id="characterName"
               placeholder="Your character's name"
               required
             />
@@ -82,7 +78,7 @@
             <input
               type="text"
               name="campName"
-              id=""
+              id="campaignName"
               placeholder="Your character's primary campaign"
               required
             />
@@ -95,7 +91,7 @@
             <input
               type="text"
               name="charGender"
-              id=""
+              id="characterGender"
               placeholder="Your character's gender"
               required
             />
@@ -105,7 +101,7 @@
             <input
               type="text"
               name="charRace"
-              id=""
+              id="characterRace"
               placeholder="Your character's race"
               required
             />
@@ -115,7 +111,7 @@
             <input
               type="text"
               name="charClass"
-              id=""
+              id="characterClass"
               placeholder="Your character's class"
               required
             />
@@ -125,7 +121,7 @@
             <input
               type="text"
               name="charLevel"
-              id=""
+              id="characterLevel"
               inputmode="numeric"
               placeholder="Your character's level"
               required
@@ -133,8 +129,8 @@
           </div>
           <div class="input-box">
             <label for="charActive" class="details">Alive/Active?: </label>
-            <select id="" name="charActive">
-              <option value="Yes" selected>Yes</option>
+            <select id="characterActive" name="charActive">
+              <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
           </div>
@@ -146,7 +142,7 @@
             <textarea
               type="textarea"
               name=""
-              id=""
+              id="characterDesc"
               rows="8"
               cols="60"
               maxlength="250"
