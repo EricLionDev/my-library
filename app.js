@@ -41,7 +41,7 @@ function newChar() {
 
 function renderList() {
   let containerList = document.querySelectorAll("#info-container");
-  let lastElement = containerList[containerList.length - 1];
+  let parentDiv = document.getElementById("list-container");
 
   // create container
   let containerDiv = document.createElement("div");
@@ -86,7 +86,7 @@ function renderList() {
   // set character desc
   let descPara = document.createElement("p");
   descPara.setAttribute("id", "list-char-description");
-  descPara.textContent = `${myCharacters[myCharacters.length - 1].desc}`;
+  descPara.innerHTML = `${myCharacters[myCharacters.length - 1].desc}`;
   containerDiv.appendChild(descPara);
 
   // buttons
@@ -122,16 +122,21 @@ function renderList() {
   let deleteBtn = document.createElement("button");
   let deleteIcon = document.createElement("span");
   deleteBtn.setAttribute("id", "delete-btn");
+  deleteBtn.addEventListener("click", function () {
+    console.log("click");
+    containerDiv.remove();
+    myCharacters.splice(myCharacters.length - 1, 1);
+  });
   bottomBtns.appendChild(deleteBtn);
   deleteIcon.classList.add("material-symbols-outlined");
   deleteIcon.textContent = "delete";
   deleteBtn.appendChild(deleteIcon);
 
   // put new elements in html doc
-  lastElement.insertAdjacentElement("afterend", containerDiv);
+  parentDiv.appendChild(containerDiv);
 }
 
-// ACTIVE BUTTON
+// ACTIVE BUTTON for example character
 let activeButton = document.getElementById("list-char-active");
 
 activeButton.addEventListener("click", function () {
@@ -144,6 +149,14 @@ activeButton.addEventListener("click", function () {
     activeButton.classList.remove("not-active");
     activeButton.innerText = "Active";
   }
+});
+
+// DELETE BUTTON FOR EXAMPLE CHARACTER
+let deleteButton = document.querySelector('button[data-id="applesbtn"]');
+let appleTainer = document.querySelector('div[data-id="applescraps"]');
+deleteButton.addEventListener("click", function () {
+  console.log("click");
+  appleTainer.remove();
 });
 
 // show / hide form

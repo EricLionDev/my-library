@@ -63,6 +63,7 @@ body {
   font-family: "Roboto" sans-serif;
   font-size: 1.8rem;
   font-weight: 100;
+  word-wrap: break-word;
 }
 #bottom-btns {
   margin-top: 1rem;

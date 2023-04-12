@@ -23,7 +23,7 @@
     <!-- END HEADER -->
     <!-- CHARACTER LIST -->
     <main id="list-container">
-      <div id="info-container">
+      <div id="info-container" data-id="applescraps">
         <p id="list-char-name">Apple Scraps</p>
         <p id="list-char-camp">Vestiges of Valiar</p>
         <p id="list-char-gender">Male He/Him</p>
@@ -44,7 +44,7 @@
         </p>
         <div id="bottom-btns">
           <button id="list-char-active" class="is-active">Active</button>
-          <button id="delete-btn">
+          <button id="delete-btn" data-id="applesbtn">
             <span class="material-symbols-outlined">delete</span>
           </button>
         </div>
@@ -60,6 +60,7 @@
           <div class="input-box">
             <label for="charName" class="details">Name: </label>
             <input
+              maxlength="64"
               type="text"
               name="charName"
               id="characterName"
@@ -70,6 +71,7 @@
           <div class="input-box">
             <label for="campName" class="details">Campaign Name: </label>
             <input
+              maxlength="64"
               type="text"
               name="campName"
               id="campaignName"
@@ -84,6 +86,7 @@
             <label for="charGender" class="details">Gender: </label>
             <input
               type="text"
+              maxlength="64"
               name="charGender"
               id="characterGender"
               placeholder="Your character's gender"
@@ -94,6 +97,7 @@
             <label for="charRace" class="details">Race: </label>
             <input
               type="text"
+              maxlength="64"
               name="charRace"
               id="characterRace"
               placeholder="Your character's race"
@@ -103,6 +107,7 @@
           <div class="input-box">
             <label for="charClass" class="details">Class: </label>
             <input
+              maxlength="64"
               type="text"
               name="charClass"
               id="characterClass"
@@ -117,6 +122,7 @@
               name="charLevel"
               id="characterLevel"
               inputmode="numeric"
+              maxlength="25"
               placeholder="Your character's level"
               required
             />
