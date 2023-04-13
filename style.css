@@ -100,10 +100,10 @@ body {
   border-radius: 0.5rem;
 }
 
-span.material-symbols-outlined:hover {
+#delete-btn > span.material-symbols-outlined:hover {
   background-color: #c2bcb3a6;
 }
-span.material-symbols-outlined:active {
+#delete-btn > span.material-symbols-outlined:active {
   background-color: #cec7bda6;
 }
 /* form container */
